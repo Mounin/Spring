@@ -22,4 +22,7 @@ public interface BookDao {
 
     // 查询返回集合
     List<Book> findAllBook();
+
+    // 批量添加
+    void batchAddBook(List<Object[]> batchArgs);
 }
