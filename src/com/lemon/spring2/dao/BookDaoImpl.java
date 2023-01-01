@@ -74,4 +74,20 @@ public class BookDaoImpl implements BookDao{
         int[] ints = jdbcTemplate.batchUpdate(sql, batchArgs);
         System.out.println(Arrays.toString(ints));
     }
+
+    // 批量修改
+    @Override
+    public void batchUpdateBook(List<Object[]> batchArgs) {
+        String sql = "update t_book set username=?,ustatus=? where user_id=?";
+        int[] ints = jdbcTemplate.batchUpdate(sql, batchArgs);
+        System.out.println(Arrays.toString(ints));
+    }
+
+    // 批量删除
+    @Override
+    public void batchDeleteBook(List<Object[]> batchArgs) {
+        String sql = "delete from t_book where user_id=?";
+        int[] ints = jdbcTemplate.batchUpdate(sql, batchArgs);
+        System.out.println(Arrays.toString(ints));
+    }
 }
