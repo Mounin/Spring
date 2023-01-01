@@ -23,4 +23,21 @@ public class BookDaoImpl implements BookDao{
         int update = jdbcTemplate.update(sql, args);
         System.out.println(update);
     }
+
+    // 修改的方法
+    @Override
+    public void update(Book book) {
+        String sql = "update t_book set username=?,ustatus=? where user_id=?";
+        Object[] args = {book.getUsername(), book.getUstatus(), book.getUserid()};
+        int update = jdbcTemplate.update(sql, args);
+        System.out.println(update);
+    }
+
+    // 删除的方法
+    @Override
+    public void delete(int id) {
+        String sql = "delete from t_book where user_id=?";
+        int update = jdbcTemplate.update(sql, id);
+        System.out.println(update);
+    }
 }

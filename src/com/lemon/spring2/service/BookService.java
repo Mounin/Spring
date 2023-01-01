@@ -16,4 +16,14 @@ public class BookService {
     public void addBook(Book book) {
         bookDao.add(book);
     }
+
+    // 修改的方法
+    public void updateBook(Book book) {
+        bookDao.update(book);
+    }
+
+    // 删除的方法
+    public void deleteBook(int id) {
+        bookDao.delete(id);
+    }
 }
