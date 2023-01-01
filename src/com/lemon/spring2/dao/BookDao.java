@@ -2,6 +2,8 @@ package com.lemon.spring2.dao;
 
 import com.lemon.spring2.entity.Book;
 
+import java.util.List;
+
 public interface BookDao {
     // 添加的方法
     void add(Book book);
@@ -10,5 +12,14 @@ public interface BookDao {
     void update(Book book);
 
     // 删除的方法
-    void delete(int id);
+    void delete(String id);
+
+    // 查询表记录数
+    public int selectCount();
+
+    // 查询返回对象
+    Book findBookInfo(String id);
+
+    // 查询返回集合
+    List<Book> findAllBook();
 }

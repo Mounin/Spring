@@ -6,6 +6,8 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.List;
+
 public class TestBook {
 
     @Test
@@ -18,7 +20,7 @@ public class TestBook {
 //        book.setUserid(1);
 //        book.setUsername("java");
 //        book.setUstatus("read");
-//        bookService.addBook(book);
+//        bookService.addBook(bo ok );
 
         // 测试修改方法
 //        Book book = new Book();
@@ -28,10 +30,22 @@ public class TestBook {
 //        bookService.updateBook(book);
 
         // 测试删除方法
-        Book book = new Book();
-        book.setUserid(1);
-        book.setUsername("javaweb");
-        book.setUstatus("lemon");
-        bookService.deleteBook(book.getUserid());
+//        Book book = new Book();
+//        book.setUserid(1);
+//        book.setUsername("javaweb");
+//        book.setUstatus("lemon");
+//        bookService.deleteBook(book.getUserid());
+
+        // 测试查询表记录数
+//        int count = bookService.findCount();
+//        System.out.println(count);
+
+        // 测试查询返回对象
+//        Book book = bookService.findOne("3");
+//        System.out.println(book);
+
+        // 测试查询返回集合
+        List<Book> bookList = bookService.findAll();
+        System.out.println(bookList);
     }
 }
