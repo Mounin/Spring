@@ -35,7 +35,7 @@ public class UserService {
             // lucy少100
             userDao.reduceMoney();
 
-            int i = 10 / 0;
+//            int i = 10 / 0;
 
             // mary多100
             userDao.addMoney();
